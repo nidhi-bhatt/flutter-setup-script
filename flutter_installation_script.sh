@@ -30,7 +30,7 @@ else
 fi
 
 echo " "
-sudo snap install android studio --classic
+sudo snap install android-studio --classic
 #open android studio -> install SDK tools (i.e whatever is prompted) -> open a new project -> file->settings -> system settings-> android sdk -> command line tools install -> wait and after completion close
 source ~/.bashrc
 sudo snap install flutter --classic
