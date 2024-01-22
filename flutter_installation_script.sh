@@ -54,3 +54,20 @@ sudo snap install code --classic
 #open vscode and install the flutter extension (can install dart also if want)
 #ctrl +shift+p this opens the command palette -> type flutter -> new project 
 
+#install dart sdk
+sudo apt-get update
+sudo apt-get install apt-transport-https
+wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
+echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
+
+sudo apt-get update
+sudo apt-get install dart
+
+#ADD DART SDK path to android studio
+#File-> Settings (ctrl+alt+s)
+#Languages and Frameworks -> Dart
+#Check "Enable Dart support for the project..."
+#In "Dart SDK path" click in "..." and navigate to flutter SDK directory. Under that directory you'll find "bin/cache/dart-sdk". This is the dart sdk path you should use.
+#Click "Apply"
+#Close the project and open it again (sometimes you need this step, sometimes doesn't)
+
